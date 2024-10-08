@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="intro">
+            <header>
+                <div class="container">
+                    <a href="#">
+                        <h2 class="logo">IG</h2>
+                    </a>
+                    <nav>
+                        <ul class="nav__list">
+                            <li><a href="#images" class="nav__link">Images</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="intro__content">
+                <div class="container">
+                    <div class="intro__carousel grid">
+                        <div class="info">
+                            <h1>Image Gallery</h1>
+                            <h3>What is image gallery?</h3>
+                            <p class="text">
+                                Image gallery is a basic little front-end project that i created with the intention of practicing my css and also handling API requests with javascript. I get all the photos from the <a href="https://www.pexels.com" class="link">pexels</a> API. Go to my <a target="_blank" href="https://aryelivert-portfolio.netlify.app" class="link">portfolio</a> to see more of my projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section pexels">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section__title">Where do i get the images?</div>
+                </div>
+                <div class="pexels-img" >
+                    <a style="color: black; font-size: 3rem; display: block; text-align: center;" href="https://www.pexels.com" target="_blank">All photos are provided by Pexels</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section images" id="images">
+            <div class="images-bg"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section__title" data-title="Choose a category">Images</h2>
+                </div>
+                
+                <div class="images__filter">
+                    <button class="btn-filter">Art</button>
+                    <button class="btn-filter">Person</button>
+                    <button class="btn-filter">Fashion</button>
+                    <button class="btn-filter">Nature</button>
+                    <button class="btn-filter">Accessories</button>
+                    <button class="btn-filter">Architecture</button>
+                </div>
+
+                <div class="images__container grid" id="images__container">
+                    <h2 class="loading">Loading...</h2>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text">
+                    Created by: <a target="_blank" href="https://aryelivert-portfolio.netlify.app">Ary Elivert</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
