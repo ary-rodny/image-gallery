@@ -123,38 +123,34 @@ nav ul{
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+}
+.intro__carousel .info{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    padding: 2rem 0;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
 
-    .info{
-        height: inherit;
-        display: flex;
-        flex-direction: column;
-        border-radius: .5rem;
-        padding: 2rem 0;
-        gap: 1.6rem;
-        justify-content: center;
-        align-items: center;
-
-        h1{
-            font-size: 4rem;
-            color: var(--mainColor);
-        }
-        p{
-            max-width: 600px;
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-    }
-
+   
+}
+.intro__carousel .info h1{
+    font-size: 4rem;
+    color: var(--mainColor);
+}
+.intro__carousel .info p{
+    max-width: 600px;
+    line-height: 1.7;
+    font-size: 1.1rem;
 }
 @media (max-width:600px){
     .intro__carousel{
         padding: 0 1rem;
-
-        .info{
-            h1{
-                font-size: 2.5rem;
-            }
-        }
+    }
+    .intro__carousel  .info h1{
+            font-size: 2.5rem;
     }
 }
 section.pexels{
@@ -189,27 +185,25 @@ section.pexels{
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-
-    button{
-        background-color: transparent;
-        border: none;
-        padding: .7rem 1.5rem;
-        border-radius: 1.5rem;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        color: white;
-        cursor: pointer;
-    }
+}
+.section.images button{
+    background-color: transparent;
+    border: none;
+    padding: .7rem 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
 }
 
 @media (max-width:600px){
     .images__filter{
         gap: .5rem;
         padding: 0;
-
-        button{
-            font-size: 1rem;
-        }
+    }
+    .images__filter  button{
+        font-size: 1rem;
     }
 }
 
@@ -219,59 +213,55 @@ section.pexels{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
     grid-template-rows: repeat(5,400px);
     gap: 1rem;
+}
+.images__container  .loading{
+    text-align: center;
+    color: white;
+}
 
-    .loading{
-        text-align: center;
-        color: white;
-    }
+.images__container .imagen{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+}
 
-    .imagen{
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        border-radius: 10px;
+.imagen .overlay{
+    position: absolute;
+    background-color: var(--mainColor);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+.imagen img{
+    width: 100%;
+}
+.imagen .imagen__info{
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0;
+}
 
-        .overlay{
-            position: absolute;
-            background-color: var(--mainColor);
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease-in-out;
-        }
+.imagen__info  h3{
+    font-size: 1.5rem;
+}
+.imagen:hover .overlay{
+    opacity: 0.6;
+}
 
-        img{
-            width: 100%;
-        }
-
-        .imagen__info{
-            cursor: pointer;
-            position: absolute;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            opacity: 0;
-
-            h3{
-                font-size: 1.5rem;
-            }
-        }
-    }
-
-    .imagen:hover .overlay{
-        opacity: 0.6;
-    }
-
-    .imagen:hover .imagen__info{
-        opacity: 1;
-    }
+.imagen:hover .imagen__info{
+    opacity: 1;
 }
 
 
@@ -286,12 +276,11 @@ section.pexels{
     margin-top: 100px;
     height: 200px;
     background-color: var(--dark);
-
-    .container{
-        height: inherit;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+}
+.footer .container{
+    height: inherit;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
